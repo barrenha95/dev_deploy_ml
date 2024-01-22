@@ -44,3 +44,34 @@ X_train['Package_Type'] = le_package_type.transform(X_test['Package_Type'])
 y_train = le_product_type.transform(y_train)
 y_test = le_product_type.transform(y_test)
 
+# Creation of the model
+dsa_model = DecisionTreeClassifier()
+
+# Train the model
+dsa_model.fit(X_train, y_train)
+
+# Do the prediction with the model
+y_pred = dsa_model.predict(X_test)
+
+# Calculate accuracy: In 100 predictions, I scored 67 right
+## Over 50% of accuracy = it's possible to be used
+## Above 70% of accureacy = it can be improved
+## Over 70% of accuracy = it's starting to become good
+
+acc_dsa_mode = accuracy_score(y_test, y_pred)
+print(f"\n Accuracy: ", round(acc_dsa_mode, 2))
+
+print(f"\n Classification report: \n")
+report = classification_report(y_test, y_pred)
+print(report)
+
+# Save the trained model
+joblib.dump(dsa_model, 'project_1/models/logistic_model.pkl')
+
+# Save the transformations
+joblib.dump(le_package_type, 'project_1/models/transformation_package_type.pkl')
+joblib.dump(le_product_type, 'project_1/models/transformation_product_type.pkl')
+
+# PERSONALNOTES FOR THE FUTURE
+## 0 - Debug the error and make the code works
+## 1 - Understand the meaning of each metric in the classification_report
