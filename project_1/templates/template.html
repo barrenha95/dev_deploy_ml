@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Prediction</title>
+    </head>
+    <body>
+        <h2>Insert the product details</h2>
+        <form action="/predict" method="post">
+            Weight (in grams): <input type="number" name="Weight"><br><br>
+            Package type:
+            <select name="package_type">
+                <option value="Cardboard">Cardboard</option>
+                <option value="Bubble_Wrap">Bubble_Wrap</option>
+            </select><br><br>
+            <input type="submit" value="Predict">
+        </form>
+        <br>
+        {% if prediction %}
+        <h3>The product in this package is probably: {{ prediction }}</h3>
+        {% endif %}
+    </body>
+</html>

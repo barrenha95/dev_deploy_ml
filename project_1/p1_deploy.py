@@ -1,15 +1,18 @@
 # Project 1 - Construction and Deployment of Machine Learning Models
 ## Objective of this script: Creation of the software that will deploy the model.
 
-from flask import Flask, render_template, request, jsonify
+# Flask = Creation of app
+# render_template = Load an webpage
+# request = get the content via requests
+from flask import Flask, render_template, request
 import joblib
 
 app = Flask(__name__)
 
 # Load of the model and the transformations
-dsa_model = joblib.load('project1/models/logistic_model.pkl')
-le_package_type = joblib.load('project1/models/transformation_package_type.pkl')
-le_product_type = joblib.load('project1/models/transformation_product_type.pkl')
+dsa_model = joblib.load('project_1/models/logistic_model.pkl')
+le_package_type = joblib.load('project_1/models/transformation_package_type.pkl')
+le_product_type = joblib.load('project_1/models/transformation_product_type.pkl')
 
 # Assign the principal route for the homepage and allow only "GET" requisitions.
 @app.route('/', methods = ['GET'])
