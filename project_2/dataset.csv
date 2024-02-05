@@ -1,4 +1,4 @@
-Idade,UsoMensal,Plano,SatisfacaoCliente,TempoContrato,ValorMensal,Churn
+Age,MonthUse,Tier,Satisfaction,Time,MonthPayment,Churn
 56,52,Premium,1,Curto,75.48,0
 69,65,Basico,4,Curto,79.25,0
 46,76,Standard,3,Longo,183.56,0

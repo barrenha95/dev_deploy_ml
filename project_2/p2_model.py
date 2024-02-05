@@ -50,3 +50,58 @@ def eda(data):
             plt.show()
 
 eda(df)            
+
+# Hypothesis until now:
+## The "age" of the customer doesn't look to influence so much in the problem because there are no atypical behavior in the univariate analysis and the medians are almost in the same point (in the candle plot).
+
+## The "monthUse" looks to be a strong feature because it looks that the highest rates of churn are concentrated in customers that are not using to much the service.
+## Other thing we noticed is that there are some excepctions that use a lot the service and cancel, it's interesting to take a look at those cases to try to find a pattern to this subgroup.
+
+## The "tier" shows that the "Premium" group has the biggest churn rate. Event if this rate is not very expressive (in comparison to other categories) maybe we can find somethings in this "tier" that is not pleasing the customers
+
+## "Satisfaction" show us the churn has a big correlation to the score the customer gave on the satisfcation pool. This reinforces the idea that come customers cancel because they are unhappy.
+
+## "Time" doesn't looks to be a feature of big importance even showing a small tendence of longer contracts be canceled.
+
+## "MonthPayment" doesn't looks to be a feature of big importance even showing a small tendence of who pay less.
+
+### SPLIT INTO TRAIN AND TEST ###
+
+def split_dataset(data, target_column, test_size, random_state = 42):
+    '''
+    Splits the dataset into train and test.
+
+    Parameters:
+    - data (DataFrame): The full dataframe.
+    - target_column (str): The name of the target column.
+    - test_size (float): The proportion used to test.
+    - random_state (int): Seed to genereate aleatory numbers (The default value is 42).
+
+    Return:
+    - X_train (DataFrame): Train dataset.
+    - X_test (DataFrame): Test dataset.
+    - y_train (Series): Target values for train dataset.
+    - y_test (Series): Target values for test dataset.
+    '''
+
+    # Split the features from the target into "inputs" and "outputs"
+    x = data.drop(target_column,axis = 1)
+
+    # Output data
+    y = data[target_column]
+
+    # Split in train and test
+    X_train, X_test, y_train, y_test = train_test_split(x,
+                                                        y,
+                                                        test_size=test_size,
+                                                        random_state=random_state)
+    
+    return X_train, X_test, y_train, y_test
+
+value_test_size = 0.3
+X_train, X_test, y_train, y_test = split_dataset(df, 'Churn', test_size=value_test_size)
+
+print(f"The X_train size is: {X_train.shape}")
+print(f"The X_test size is: {X_test.shape}")
+print(f"The y_train size is: {y_train.shape}")
+print(f"The y_test size is: {y_test.shape}")
