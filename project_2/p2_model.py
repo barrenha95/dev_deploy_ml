@@ -105,3 +105,50 @@ print(f"The X_train size is: {X_train.shape}")
 print(f"The X_test size is: {X_test.shape}")
 print(f"The y_train size is: {y_train.shape}")
 print(f"The y_test size is: {y_test.shape}")
+
+### PREPROCESSING DATA ###
+
+# Filtering cathegorical features
+categorical_cols = df.select_dtypes(include = ['object']).columns
+print(categorical_cols)
+
+## One-Hot Encoding ##
+# Apply the One-Hot encoding separately on train and test
+encoder = OneHotEncoder(sparse_output=False)
+
+# Trainning the encoder with the train data and apply in both
+X_train_encoded = pd.DataFrame(encoder.fit_transform(X_train[categorical_cols]))
+X_test_encoded = pd.DataFrame(encoder.fit_transform(X_test[categorical_cols]))
+
+# Rename the columns
+X_train_encoded.columns = encoder.get_feature_names_out(categorical_cols)
+X_test_encoded.columns = encoder.get_feature_names_out(categorical_cols)
+
+# Remove the original columns
+X_train_preprocessed = X_train.drop(categorical_cols, axis = 1).reset_index(drop = True)
+X_train_preprocessed = pd.concat([X_train_preprocessed, X_train_encoded], axis = 1)
+print('X_train_preprocessed')
+print(X_train_preprocessed.head())
+
+X_test_preprocessed = X_test.drop(categorical_cols, axis = 1).reset_index(drop = True)
+X_test_preprocessed = pd.concat([X_test_preprocessed, X_test_encoded], axis = 1)
+print('X_test_preprocessed')
+print(X_test_preprocessed.head())
+
+## StandardScaler ##
+
+# Selecting the numeric features
+numeric_cols = X_train_preprocessed.select_dtypes(include=['int64', 'float64']).columns
+
+# Creating the StandardScaler
+scaler = StandardScaler()
+
+# Apply the StandardScaler
+X_train_preprocessed[numeric_cols] = scaler.fit_transform(X_train_preprocessed[numeric_cols])
+X_test_preprocessed[numeric_cols] = scaler.transform(X_test_preprocessed[numeric_cols])
+
+print('X_train_preprocessed')
+print(X_train_preprocessed.head())
+
+print('X_test_preprocessed')
+print(X_test_preprocessed.head())
