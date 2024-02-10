@@ -152,3 +152,24 @@ print(X_train_preprocessed.head())
 
 print('X_test_preprocessed')
 print(X_test_preprocessed.head())
+
+### Model ###
+# For this activity we selected the RandomForest algorithm to develop the model.
+# It is a ensemble method (ensemble = merge multiple models) that works based on multiples decision trees.
+# This model belongs to a biggest class of ensemble models named bagging.
+# The bagging class try to low the risk of overfitting by trainning multiple models in multiple samples of the data at the same time.
+# The results of the models could be mered by mean (for regression problems) and by voting (for classification problems).
+
+##RandomForest Steps ##
+# 1 - Bootstrap samples: Multiple samples of trainning data are created using bootstrap, what means that for each new tree the algorithm selects randomly a sample. PS: The same sample can appears more than one time.
+
+# 2 - Decision trees construction: For each data sample a decision tree is build too. For each decision tree only a aleatory sample of features are selected too, this help to prevent from overfitting because each tree will have a diferent perspective from the Data.
+
+# 3 - Splitting decisions: Instead of what happens in only one decision tree where all the features are used to make a split, in RandomForest only a limited sample of features are selected at each node.
+
+# 4 - Growing trees: The trees raises to their limit, what means that each leaf must have only one of the features or at least less than a giver number of samples.
+
+# 5 - Prediction: The RandomForest algorithm collects all the answers from the individual trees, in classification it select the mode (the class more voted) and in regressions the mean of the predictions.
+
+# 6 - Variance reduction: Because of the use of mean, the RandomForest is less suscetible to impact of noise in the data and specific variations.
+
