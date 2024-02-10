@@ -173,3 +173,24 @@ print(X_test_preprocessed.head())
 
 # 6 - Variance reduction: Because of the use of mean, the RandomForest is less suscetible to impact of noise in the data and specific variations.
 
+## Modelling ##
+
+# creation of the model
+model_v1 = RandomForestClassifier(random_state=42)
+
+# Training the model
+model_v1.fit(X_train_preprocessed, y_train)
+
+# Making predictions
+y_pred = model_v1.predict(X_test_preprocessed)
+
+# Model evaluation
+accuracy = accuracy_score(y_test, y_pred)
+classification_rep = classification_report(y_test, y_pred)
+
+# Accuracy goes from 0 to 1
+## from 0.5 to 0.7  = The model found some standard but it's a bad model
+## from 0.7 to 0.8 = Ok this model is reasonable
+## >0.8 = It's a good model
+print(f"The accuracy is: {accuracy}")
+print(classification_rep)
