@@ -195,4 +195,12 @@ classification_rep = classification_report(y_test, y_pred)
 print(f"The accuracy is: {accuracy}")
 print(classification_rep)
 
-# Test deploy from other computer
+## Applying the cross-validation ##
+# Creation of a new RandoForest for the cross-validation
+mode_cv = RandomForestClassifier(random_state=42)
+
+# Using 5 folds to the cross-validation
+## We selected 5 chunks of data to do the cross-validation
+## In this method each fold is used to train and test one time
+cv_scores = cross_val_score(model_cv, X_train_preprocessed, y_train, cv=5)
+print(cv_scores)
