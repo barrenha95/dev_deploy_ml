@@ -160,7 +160,7 @@ print(X_test_preprocessed.head())
 # The bagging class try to low the risk of overfitting by trainning multiple models in multiple samples of the data at the same time.
 # The results of the models could be mered by mean (for regression problems) and by voting (for classification problems).
 
-##RandomForest Steps ##
+## RandomForest Steps ##
 # 1 - Bootstrap samples: Multiple samples of trainning data are created using bootstrap, what means that for each new tree the algorithm selects randomly a sample. PS: The same sample can appears more than one time.
 
 # 2 - Decision trees construction: For each data sample a decision tree is build too. For each decision tree only a aleatory sample of features are selected too, this help to prevent from overfitting because each tree will have a diferent perspective from the Data.
@@ -197,10 +197,44 @@ print(classification_rep)
 
 ## Applying the cross-validation ##
 # Creation of a new RandoForest for the cross-validation
-mode_cv = RandomForestClassifier(random_state=42)
+model_cv = RandomForestClassifier(random_state=42)
 
 # Using 5 folds to the cross-validation
 ## We selected 5 chunks of data to do the cross-validation
 ## In this method each fold is used to train and test one time
 cv_scores = cross_val_score(model_cv, X_train_preprocessed, y_train, cv=5)
-print(cv_scores)
+print(cv_scores) # Score = performance of the model (f1-score)
+
+# What is the conclusion?
+## In all of the chunks tested we obtained values near to 0.70.
+## As you can see, a value near to what we obtained in the first model.
+## This means the data don't have "subgroups" and the model is learning the main behaviour.
+## In other words: I'm in almost the best proportion of sample possible
+
+## Hyperparameters optmization ##
+
+# Setting the hyperparameters to be optimized
+param_grid = {
+    'n_estimators': [50, 100, 200],
+    'max_depth': [None, 10, 20, 30],
+    'min_samples_split': [2, 4, 6],
+    'min_samples_leaf': [1, 2, 4]
+}
+
+# Creation of the RandomForest model with the optimization
+## When you create the model this way, the function add the standard values for the hyperparameters.
+model_opt = RandomForestClassifier(random_state=42)
+
+# Configuring the search in grid with the cross-validation
+## The grid_search makes possible to create the model using all those combinations set
+grid_search = GridSearchCV(model_opt, param_grid, cv=5, scoring = 'accuracy', n_jobs=-1)
+
+# Making the optmization with the train dataset
+grid_search.fit(X_train_preprocessed, y_train)
+
+# best parameters and ponctuation
+best_params = grid_search.best_params_
+best_score = grid_search.best_score_
+
+print(best_params)
+print(best_score)
