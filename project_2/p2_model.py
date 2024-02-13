@@ -194,3 +194,5 @@ classification_rep = classification_report(y_test, y_pred)
 ## >0.8 = It's a good model
 print(f"The accuracy is: {accuracy}")
 print(classification_rep)
+
+# Test deploy from other computer
