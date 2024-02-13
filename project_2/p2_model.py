@@ -238,3 +238,28 @@ best_score = grid_search.best_score_
 
 print(best_params)
 print(best_score)
+
+## Model final version ##
+model_final = RandomForestClassifier(n_estimators=best_params['n_estimators'],
+                                     max_depth=best_params['max_depth'],
+                                     min_samples_split=best_params['min_samples_split'],
+                                     min_samples_leaf=best_params['min_samples_leaf'],
+                                     random_state=42)
+
+# training the model
+model_final = model_final.fit(X_train_preprocessed, y_train)
+
+# predict data in test data
+y_pred_final = model_final.predict(X_test_preprocessed)
+
+# evaluation
+final_accuracy = accuracy_score(y_test, y_pred_final)
+final_classification_rep = classification_report(y_test, y_pred_final)
+
+print(f"The accuracy is: {final_accuracy}")
+print(final_classification_rep)
+
+## Dumping ##
+joblib.dump(model_final, 'project_2/models/model_final.pkl')
+joblib.dump(scaler, 'project_1/models/scaler.pkl')
+print(X_train_preprocessed.head())
