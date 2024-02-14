@@ -1,0 +1,144 @@
+<mxfile host="app.diagrams.net" modified="2024-02-08T09:57:17.335Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="tgoB-lxE0-oWwLOhtGBR" version="23.1.1" type="device">
+  <diagram name="Page-1" id="9BntihsFk7mdRiOSXall">
+    <mxGraphModel dx="2314" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="SfS3nyrZdsiLCyRBWHRY-2" target="aBSJtUIZEhbPUjaxoFPo-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-2" value="Business Understanding" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-3" value="Understand the business problem:&lt;br&gt;&lt;br&gt;- Talk with who works directly with that&lt;br&gt;&lt;br&gt;- Seek and understanding of the available data&lt;br&gt;&lt;br&gt;- Talk with the stakeholders about what they are trying to solve&lt;br&gt;&lt;br&gt;- Collect practical insights about the problem&amp;nbsp;&lt;br&gt;&lt;br&gt;- Discover what are the best indicators to understand what is a success" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="240" width="160" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="SfS3nyrZdsiLCyRBWHRY-5" target="SfS3nyrZdsiLCyRBWHRY-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-5" value="Exploratory Analysis" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-7" value="Deep study of the available data:&lt;br&gt;&lt;br&gt;- How the data sources interact?&lt;br&gt;&lt;br&gt;- What are the characteristics of the data? How is the distribution? How the data is spread?&lt;br&gt;&lt;br&gt;- What is the meaning of each column?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="240" width="160" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="WSRAFrfma7am7ewedlzr-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SfS3nyrZdsiLCyRBWHRY-8" target="SfS3nyrZdsiLCyRBWHRY-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-8" value="Pre-processing" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1001" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-9" value="Pre-processing = operations made to enhance the available data, lowering the bias and enhancing the prediction model&lt;br&gt;&lt;br&gt;Examples:&lt;br&gt;&lt;br&gt;-&amp;nbsp;Scale normalization (use only train data to not leak data)&lt;br&gt;&lt;br&gt;- Principal Component Analysis (PCA) to reduce the dimensionality the data&lt;br&gt;&lt;br&gt;- Data wrangling techniques like:&lt;br&gt;&amp;gt; Filling gaps&lt;br&gt;&amp;gt; Removing outliers&lt;br&gt;&amp;gt; Removing special characters&lt;br&gt;&amp;gt; Standardize data (apply lowercase, exchange &quot; &quot; into &quot;_&quot;)&amp;nbsp;&lt;br&gt;&amp;gt; Convert categorical data into numerical data using label encoding, ordinal encoding or one-hot encoding" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1001" y="240" width="160" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="WSRAFrfma7am7ewedlzr-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SfS3nyrZdsiLCyRBWHRY-10" target="aBSJtUIZEhbPUjaxoFPo-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-10" value="Feature Engineering" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1241" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-13" value="Is the process of creation of new features and chose which will be used for that model.&lt;br&gt;&lt;br&gt;Examples:&lt;br&gt;- Creation of new features based on others&lt;br&gt;&lt;br&gt;- Selection of features&lt;br&gt;&lt;br&gt;-&amp;nbsp;Principal Component Analysis (PCA) to reduce the dimensionality the data&lt;br&gt;&lt;br&gt;- Check the correlation of each feature&lt;br&gt;&lt;br&gt;- Check the feature importance related to the target column&lt;br&gt;&lt;br&gt;- Use of simple models to understand how is the behavior of the model adding or removing the features, like in the techniques of&amp;nbsp;Forward Selection or&amp;nbsp;Backward Elimination" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1241" y="240" width="160" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="WSRAFrfma7am7ewedlzr-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SfS3nyrZdsiLCyRBWHRY-14" target="SfS3nyrZdsiLCyRBWHRY-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-14" value="Split of the database" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SfS3nyrZdsiLCyRBWHRY-15" value="In this step you need to split the database into &quot;train&quot; and &quot;test&quot;, the train will be used to train the model and the test will be used to evaluate if the model created &quot;learned the problem&quot;, if happened underfit or overfit.&lt;br&gt;&lt;br&gt;Strategies:&lt;br&gt;&lt;br&gt;- 70% | 30%: The most used&lt;br&gt;&lt;br&gt;- Other %: It depends of how much available data do you have, the biggest the amount, smallest (in percentage) the test data could be, for example 90% | 10%&lt;br&gt;&lt;br&gt;- Timeseries split: Usually in this type of problems the older months are used for train and the newer are for test." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="760" y="240" width="160" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-1" target="SfS3nyrZdsiLCyRBWHRY-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-1" value="Data Collection" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-2" value="Gather, storage and clean&amp;nbsp; the data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="280" y="240" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-5" target="SfS3nyrZdsiLCyRBWHRY-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1520" y="80" />
+              <mxPoint x="1320" y="80" />
+            </Array>
+            <mxPoint x="1060" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-19" value="Model still wasn&#39;t good?" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aBSJtUIZEhbPUjaxoFPo-18" vertex="1" connectable="0">
+          <mxGeometry x="-0.0514" y="3" relative="1" as="geometry">
+            <mxPoint x="1" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-5" target="aBSJtUIZEhbPUjaxoFPo-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-5" value="Model construction" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1480" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-7" target="aBSJtUIZEhbPUjaxoFPo-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-7" value="Test the model&lt;br&gt;(Validation)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1960" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-8" target="aBSJtUIZEhbPUjaxoFPo-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2280" y="80" />
+              <mxPoint x="1600" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-21" value="Fine tuning" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aBSJtUIZEhbPUjaxoFPo-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.0151" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-8" target="aBSJtUIZEhbPUjaxoFPo-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-8" value="Hyperparameter optimization" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2200" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-22" target="aBSJtUIZEhbPUjaxoFPo-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-22" value="Deploy" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2440" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-24" target="aBSJtUIZEhbPUjaxoFPo-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1620" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2520" y="280" />
+              <mxPoint x="2040" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-27" value="Bad indicators?" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aBSJtUIZEhbPUjaxoFPo-26" vertex="1" connectable="0">
+          <mxGeometry x="0.0085" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-24" value="Follow indicators" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-28" value="- &lt;u&gt;cross-validation:&lt;/u&gt; Used specially when you have a small database. It consists in randomly split in multiple groups of &quot;test&quot; and &quot;train&quot; datasets, at each time the same row could be in train or in test sample.&lt;br&gt;&lt;br&gt;performance metrics&lt;br&gt;-&amp;nbsp;&lt;u&gt;Classification:&lt;/u&gt; Precision, recall, F1 score&lt;br&gt;&lt;br&gt;-&amp;nbsp;&lt;u&gt;Regression:&lt;/u&gt; MSE, RMSE, MAE&lt;br&gt;&lt;br&gt;-&amp;nbsp;&amp;nbsp;&lt;u&gt;Clustering:&lt;/u&gt; Silhouette coefficient&lt;br&gt;&lt;br&gt;- Confusion Matrix&lt;br&gt;&lt;br&gt;- ROC and AUC curve&lt;br&gt;&lt;br&gt;- Comparing with the reference model&lt;br&gt;&lt;br&gt;- Statistical tests (like T test)&lt;br&gt;&lt;br&gt;- Sensitivity (real true rate) and specificity (real false rate)&lt;br&gt;&lt;br&gt;- Significance test&lt;br&gt;&lt;br&gt;- Check the performance in subgroups" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1960" y="280" width="160" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="aBSJtUIZEhbPUjaxoFPo-29" target="aBSJtUIZEhbPUjaxoFPo-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-29" value="Callbacks" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1720" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aBSJtUIZEhbPUjaxoFPo-30" value="Techniques created to take actions during the training process.&lt;br&gt;&lt;br&gt;It was created because some models takes hours (sometimes days) to train, and this tools can help you to see a problem faster, tune hyperparameters or even stop the process if the model isn&#39;t learning anymore&amp;nbsp;&lt;br&gt;&lt;br&gt;- &lt;u&gt;Early Stopping&lt;/u&gt;: Stop the training if some metric is not changing at each age.&lt;br&gt;&lt;br&gt;- &lt;u&gt;Model Checkpoint&lt;/u&gt;: Save the model in many versions storing only the best version following the chosen metrics.&lt;br&gt;&lt;br&gt;- &lt;u&gt;Learning Rate Scheduling&lt;/u&gt;: Adjustment of the learning rate along the process.&lt;br&gt;&lt;br&gt;- &lt;u&gt;Logging&lt;/u&gt;: Saving metrics and statistics.&lt;br&gt;&lt;br&gt;- &lt;u&gt;Dynamic Adjustments:&lt;/u&gt; Adjust the hyperparameters&lt;br&gt;&lt;br&gt;&lt;u&gt;Condition-based Actions:&lt;/u&gt; Do actions based in how the training status is." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1720" y="280" width="160" height="560" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
