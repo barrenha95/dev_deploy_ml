@@ -261,5 +261,5 @@ print(final_classification_rep)
 
 ## Dumping ##
 joblib.dump(model_final, 'project_2/models/model_final.pkl')
-joblib.dump(scaler, 'project_1/models/scaler.pkl')
+joblib.dump(scaler, 'project_2/models/scaler.pkl')
 print(X_train_preprocessed.head())
