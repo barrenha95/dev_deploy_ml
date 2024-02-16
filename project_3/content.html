@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explanations about the content</title>
+</head>
+<body>
+    <h1>The deployment of models</h1>
+    <p>The deployment is a essential phase in th lifecycle of a Machine Learning project.</p>
+    <p>It's about the transition between a developed model in development environment to the production environment.</p>
+    <ol>
+        <li><u>Model development:</u> Before the deployment you must have a model developed and trained using historical data. At this moment you will select the correct algorithm, the feature engineering and the best model optmization.</li>
+        <li><u>Validation and test:</u> After the training the model is tested to make sure it will have the necessary performance in the production environment. It includes metrics like precision, recall, F1 Score and other.</li>
+        <li><u>Deploy preparation:</u>The model is converted to another formats like PMML (Predictive Model Markup Language) or ONNX (Open Neural Network Exchange).</li>
+        <li><u>Infraestructure selection:</u> The model can be deployed in local servers, on cloud (like AWS, Azure or Google Cloud) or even on edge devices (for IOT applications).</li>
+        <li><u>Integration and model deployment:</u> The model is integrated with the production system. For this step you could use APIs (Application Programming Interfaces) to make the link easier between the applications and services.</li>
+        <li><u>Monitoring and maintenance:</u> After the deployment, it's required the creation of monitoring tools to continuously detect problems, data drift or model degradation. This step will tell us if we need to re-train the model with newer data or even if we need to adjust the parameters to mantain good precision.</li>
+        <li><u>Updates:</u> The model deployment isn't static. Using feedbacks and following the monitoring indicators the model could be updated and imrpoved.</li>
+    </ol>
+
+    <h1>The deployment preparation</h1>
+    <ol>
+        <li><u>Model optmization:</u> It could be the shrink of the model size or even the hyperparameter optimization.</li>
+        <li><u>Validation:</u> Crossvaldation, use of new data to verify metrics like precision are examples.</li>
+        <li><u>Convertion:</u> The model should be converted to other formats depending of the production environment. It could be ONNX, TensorFlow SavedModels and others examples.</li>
+        <li><u>Creation of Wrapper or API:</u> It's created to make the comunication of the model and the aplications easier. It could be made using frameworks like Flask or FastAPI.</li>
+        <li><u>Documentation:</u> It's about the documentation of the model, like how it must be used, the limitations, versions and history of changes.</li>
+        <li><u>Creation of Containers (optional):</u> To make the deployment easier it's possible to create containers using tools like Docker.</li>
+        <li><u>Security and compliance:</u> It's the concern if the model is following the security and compliance laws like GDPR, HIPAA or LGPD.</li>
+        <li><u>Rollout strategy:</u> This step is about plan how the deployment will be like a gradual deployment to mitigate risks and even rollback plans if anything wents bad.</li>
+        <li><u>Alerts and monitoring:</u> Creation of monitoring systems to follow the model performance in production and send alerts when detect data drift or failures.</li>
+    </ol>
+</body>
+</html>
+
+<h1>Containers and orquestration</h1>
+<h2>Containers</h2>
+<p>Create a container is a way to pack a software and all that is necessary to his execution making it possible to execute the software independent of the environment.</p>
+<p>It's possible to pack code, libraries, dependencies, environment variables.</p>
+<p>A example of tool of this nature is "Docker".</p>
+<h3>Benefits of Containers</h3>
+<ul>
+    <li>Allow the creation of a consistent environment for the applications independent of where it is running.</li>
+    <li>It can be moved easily from one environment to another.</li>
+    <li>Containers share the same core as the operational system making then lighter than traditional virtual machines.</li>
+</ul>
+
+<h2>Orquestration</h2>
+<p>The orquestration is the management of the life of the containers, specially in environments where there are many containers running at the same time.</p>
+<p>The example of tools are "Kubernetes" and "Docker Swarm".</p>
+<h3>Benefits of Orquestration</h3>
+<ul>
+    <li>It allow us to manage automatically the containers scale based on the workload.</li>
+    <li>It share automatically the requests between the containers to allow the efficient utilization of resources.</li>
+    <li>It's possible to auto-reset, change and kill containers with errors.</li>
+</ul>
+
