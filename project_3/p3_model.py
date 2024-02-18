@@ -38,9 +38,9 @@ print(X_test_scaled.shape)
 
 ## First version of the model ##
 # For the first version we will use LogisticRegression because of it simplicity to explain the weights of each feature.
+# It's usually the "benchmark" model because it is the more simple machine learning model.
 # This model calculates the chance of the input be in each category giving a probability between 0 and 1.
 # The most recommended performance metrics for this model is: Accuracy, Confusion Matrix, and AUC-ROC.
-# It's usually the "benchmark" model because it is the more simple machine learning model.
 
 model_v1 = LogisticRegression()
 
@@ -62,6 +62,7 @@ print(f"\Classification report: {class_v1}")
 
 ## Second version of the model ##
 # For the second version we will use the RandomForest algorithm.
+# The big problem of this kind of model is that he easily become overfitted.
 
 model_v2 = RandomForestClassifier()
 
@@ -80,3 +81,25 @@ print(f"\nAuc: {auc_v2}")
 
 class_v2 = classification_report(y_test, y_pred_v2)
 print(f"\Classification report: {class_v2}")
+
+## Third version of the model ##
+# For the third version we will use the Support Vector Machines (SVM) algorithm
+# It's a good model but it's heavier than the other and must a special attention to the hyperparameters.
+# It basically draw a plan in the space that explains the best some behavior.
+
+model_v3 = SVC(verbose=True, probability=True)
+model_v3.fit(X_train_scaled, y_train)
+y_pred_v3 = model_v3.predict(X_test_scaled)
+print(y_pred_v3)
+
+y_pred_prob_v3 = model_v3.predict_proba(X_test_scaled)[:, 1]
+print(y_pred_prob_v3)
+
+acc_v3 = accuracy_score(y_test, y_pred_v3)
+print(f"\nAccuracy: {acc_v3}")
+
+auc_v3 = roc_auc_score(y_test, y_pred_prob_v3)
+print(f"\nAuc: {auc_v3}")
+
+class_v3 = classification_report(y_test, y_pred_v3)
+print(f"\Classification report: {class_v3}")
