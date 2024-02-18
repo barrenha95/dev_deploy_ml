@@ -1,3 +1,7 @@
+## HOW TO RUN ##
+# flask run -- for development, it's lightweight but don't resists too much requisitions
+# gunicorn -w 4 app:app -- this "-w 4" means 4 threads 
+
 import pickle
 import numpy as np
 import pandas as pd
@@ -12,16 +16,16 @@ def load_file(location):
     with open(location, 'rb') as file:
         return pickle.load(file)
     
-model = load_file('project_3/models/model_final.pkl')
-scaler = load_file('project_3/models/scaler_final.pkl')
+model = load_file('models/model_final.pkl')
+scaler = load_file('models/scaler_final.pkl')
 
 # Route to the welcome web page
 @app.route('/')
 def index():
-    return render_template('project_3/templates/index.html')
+    return render_template('index.html')
 
 # Route to the prediction function
-@app.route('/predict', methods = 'POST')
+@app.route('/predict', methods = ["POST"])
 def prediction():
     try:
 

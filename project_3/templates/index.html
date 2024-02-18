@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container{
+            margin-top: 50px;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+        }
+        label{
+            margin-bottom: 5px;
+        }
+        input[type="text"]{
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"]{
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: navy;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>School management</h1>
+
+        <form method="post" action="/predict">
+            <label for="EnglishTestScore"> Your score in the English Test.</label>
+            <input type="text" id="EnglishTestScore" name="EnglishTestScore" placeholder="Enter a number between 0 and 10." required>
+
+            <label for="PsyTestScore"> Your score in the psychotechnical test.</label>
+            <input type="text" id="PsyTestScore" name="PsyTestScore" placeholder="Enter a number between 0 and 100." required>
+
+            <label for="QIValue"> Your score in the QI test.</label>
+            <input type="text" name="QIValue" id="QIValue" placeholder="Enter a number between 0 and 200." required>
+
+            <input type="submit" value="Predict admission.">
+        </form>
+        </br>
+        {% if result %}
+            <p><strong>{{result}}</strong></p>
+        {% endif %}
+    </div>
 </body>
 </html>
