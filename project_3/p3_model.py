@@ -103,3 +103,20 @@ print(f"\nAuc: {auc_v3}")
 
 class_v3 = classification_report(y_test, y_pred_v3)
 print(f"\Classification report: {class_v3}")
+
+## Comparing the models ## 
+# Accuracy: Logistic Recression < RandomForest < SVM
+# AUC:  Logistic Recression > RandomForest > SVM
+# It means the first model give less right answers but, because of the AUC it show less signals of overfitting
+# The selected model is: The first!
+
+# Argumentation #
+# 1 - IF the differences are small, use the most simple model
+# 2 - AUC is better than accuracy to compare differente kinds of algorithms
+# 3 - In the precision metric, the LogisticRegression was able to show the inbalance between the two classes (0 and 1) better than other algorithms
+
+pickle.dump(model_v1, open('project_3\models\model_final.pkl', 'wb'))
+pickle.dump(scaler, open('project_3\models\scaler_final.pkl', 'wb'))
+
+# Now we have the model save in disk.
+# The next step will be deploy the model in AWS.
