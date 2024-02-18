@@ -60,3 +60,23 @@ print(f"\nAuc: {auc_v1}")
 class_v1 = classification_report(y_test, y_pred_v1)
 print(f"\Classification report: {class_v1}")
 
+## Second version of the model ##
+# For the second version we will use the RandomForest algorithm.
+
+model_v2 = RandomForestClassifier()
+
+model_v2.fit(X_train_scaled, y_train)
+y_pred_v2 = model_v2.predict(X_test_scaled)
+print(y_pred_v2)
+
+y_pred_prob_v2 = model_v2.predict_proba(X_test_scaled)[:,1]
+print(y_pred_prob_v2)
+
+acc_v2 = accuracy_score(y_test, y_pred_v2)
+print(f"\nAccuracy: {acc_v2}")
+
+auc_v2 = roc_auc_score(y_test, y_pred_prob_v2)
+print(f"\nAuc: {auc_v2}")
+
+class_v2 = classification_report(y_test, y_pred_v2)
+print(f"\Classification report: {class_v2}")
